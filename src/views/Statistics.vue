@@ -1,15 +1,17 @@
 <template>
-  <div class="Statistics">
-    Staristics
-  </div>
+  <layout>
+    <p>staristics</p>
+  </layout>
 </template>
 
 <script>
+import layout from '../components/content/layout.vue'
 export default {
+  components: { layout },
   name:'Statistics'
 }
-</script>
+</script> 
 
-<style>
+<style scoped>
 
 </style>
