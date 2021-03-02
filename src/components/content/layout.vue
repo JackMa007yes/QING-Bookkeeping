@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .nav-wrapper {
     display: flex;
     flex-direction: column;
@@ -25,5 +25,6 @@ export default {
   .content {
     flex:1;
     overflow: auto;
+    
   }
 </style>

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import layout from '../components/content/layout.vue'
+import layout from '@/components/content/layout.vue'
 export default {
   components: { layout },
   name:'Statistics'
