@@ -19,7 +19,6 @@ export const echart = {
     recordListbyMonth:{
       handler:function(){
         if(this.watchFlag){
-          console.log('~~~~~~~~~~~~~~~~~~~~')
           this.eChartInit()
         }
 

@@ -39,7 +39,6 @@ export default {
     selectDate(date){
       // const newDate = Date.parse(date)
       this.$emit('dateSelectDone',date)
-      console.log(Date.parse(date))
     },
     closeDate(){
       this.$emit('closeDate')
