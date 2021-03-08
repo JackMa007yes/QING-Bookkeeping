@@ -4,7 +4,8 @@ import './registerServiceWorker'
 import router from '@/router/index'
 import store from './store'
 import Nav from '@/components/common/nav/Nav.vue'
-import Echarts from 'echarts'
+// import Echarts from 'echarts'
+import * as Echarts from 'echarts'
 // const Echarts = require('echarts')
 
 import {Popup,DatetimePicker} from 'vant';
