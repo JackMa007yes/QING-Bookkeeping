@@ -1,8 +1,8 @@
 <template>
   <div class="nav">
-    <router-link to="/labels" tag="div" class="item" active-class="selected">
+    <router-link to="/detail" tag="div" class="item" active-class="selected">
     <i class="iconfont  icon-Label"></i>
-    <p>标签</p>
+    <p>明细</p>
     </router-link>
     <router-link to="/money" tag="div" class="item" active-class="selected">
     <i class="iconfont  icon-money-"></i>
@@ -46,11 +46,11 @@ export default {
     font-size: 12px;
   }
   .selected {
-    color: rgb(246,197,92);
+    color: var(--color-tint2);
   }
   .selected>i {
     font-weight: 800;
-    color: rgb(246,197,92);
+    color: var(--color-tint2);
   }
 
 </style>

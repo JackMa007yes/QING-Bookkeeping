@@ -5,7 +5,7 @@
       class="tag-item"
       :class="{selected:isSelect === index}"
       @click="select(index)">
-      <div class="tag-wrapper">
+      <div class="tag-wrapper" :class="{income:isIncome}">
         <i class="iconfont"  :class="item.tag"></i>
       </div>
       <div class="text">{{item.title}}</div>
@@ -22,6 +22,10 @@ export default {
       default(){
         return []
       }
+    },
+    isIncome:{
+      type:Boolean,
+      default:false
     }
   },
   data(){
@@ -32,6 +36,8 @@ export default {
   methods:{
     select(index){
       this.isSelect = index
+      const tag = this.tagList[index]
+      this.$emit('tagChoose',tag)
     }
   }
 }
@@ -71,6 +77,9 @@ export default {
   }
   .selected .tag-wrapper{
     background-color: var(--color-tint2);
+  }
+  .selected .income{
+    background-color: var(--color-tint1);
   }
   .selected .iconfont{
     color: white;

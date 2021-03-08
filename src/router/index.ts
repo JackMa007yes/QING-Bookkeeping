@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Money from "@/views/money/Money.vue";
-import Labels from "@/views/lables/Labels.vue";
+import Detail from "@/views/detail/detail.vue";
 import Statistics from "@/views/statistics/Statistics.vue";
 import NotFound from "@/components/common/notfound/NotFound.vue";
 
@@ -19,8 +19,8 @@ const routes = [
     component: Money
   },
   {
-    path: '/labels',
-    component: Labels,
+    path: '/detail',
+    component: Detail,
   },
   {
     path: '/statistics',

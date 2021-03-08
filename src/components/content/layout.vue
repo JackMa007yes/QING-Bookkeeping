@@ -3,16 +3,18 @@
     <div class="content">
       <slot></slot>
     </div>
-    <NavV/>
+    <NavV class="nav"/>
   </div>
 </template>
 
 <script>
 export default {
   name:'Layout',
-  components: {
-    
-  },
+  mounted(){
+    const wrapper = document.getElementsByClassName("nav-wrapper")[0];
+    const height = window.innerHeight;
+    wrapper.style.height = height +('px'); 
+  }
 }
 </script>
 
@@ -20,11 +22,16 @@ export default {
   .nav-wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100%; */
   }
   .content {
     flex:1;
     overflow: auto;
-    
-  }
+  } 
+  /* .nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  } */
 </style>

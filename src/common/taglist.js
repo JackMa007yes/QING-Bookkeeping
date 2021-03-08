@@ -1,4 +1,4 @@
-const tagList = 
+const TagList = 
       {'cost':
       [{'title':'家人','tag':'icon-bangdingjiaren'},
       {'title':'美妆','tag':'icon-meizhuang'},
@@ -47,4 +47,4 @@ const tagList =
       {'title':'报销','tag':'icon-baoxiao'},
      ]}
 
-export default tagList
+export default TagList
