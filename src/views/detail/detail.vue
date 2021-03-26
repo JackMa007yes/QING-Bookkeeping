@@ -40,21 +40,7 @@ export default {
         return a
       })
       return byMonth
-    },
-    // result(){
-    //   const list = this.recordListbyMonth.sort((a,b)=>{
-    //       const stringB = b.date.split('-')
-    //       const stringA = a.date.split('-')
-    //       return stringB[2]*1-stringA[2]*1 >= 0
-    //     })
-    //   const hashTable = {}
-    //   for(let i = 0 ; i<list.length;i++){ 
-    //     const date = list[i].date
-    //     hashTable[date] = hashTable[date] || []
-    //     hashTable[date].push({title:date,items:list[i]})
-    //   }
-    //   return hashTable
-    // },
+    }
   },
   mounted(){
     this.$store.commit('fetchRecords')

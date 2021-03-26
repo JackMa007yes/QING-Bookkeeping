@@ -3,7 +3,7 @@
     <top-tab-bar @selectType="selectType"/>
     <div class="content">
       <tags :tagList="TagList[type]" :isIncome="type === 'income'" class="tag" @tagChoose='tagChoose'/>
-      <number-pad @dateSelect='dateSelect' @commit="commit" @textContent='textContent' :isIncome="type === 'income'"/>
+      <number-pad @dateSelect='dateSelect' :DateChoosed="DateChoosed"  @commit="commit" @textContent='textContent' :isIncome="type === 'income'"/>
     </div>
     <datechoose :show="isShow" @dateSelectDone='dateSelectDone' @showPopup='showPopup' @closeDate='closeDate'/>
   </layout>
@@ -33,6 +33,7 @@ export default {
       type:'cost',
       isShow:false,
       date:'',
+      DateChoosed:false,
       recordList:JSON.parse(window.localStorage.getItem('recordList') || '[]'),
       records:{'type':'cost',
                     'amount':0,
@@ -59,6 +60,7 @@ export default {
       this.date = a
       this.records.date = a
       this.isShow = false
+      this.DateChoosed = true
     },
     closeDate(){
       this.isShow = false
@@ -78,10 +80,9 @@ export default {
       const record2 = JSON.parse(JSON.stringify(this.records)) 
       this.recordList.push(record2)
       window.localStorage.setItem('recordList',JSON.stringify(this.recordList))
-      // console.log(this.records)
       this.$store.commit('addrecord',record2)
-      // this.records.date = {}
-      window.alert('已添加新纪录')
+      this.$toast.show('已添加新纪录')
+      this.DateChoosed = false
     }
   },
 }

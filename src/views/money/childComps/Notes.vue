@@ -64,11 +64,9 @@ export default {
     border: none;
     font-size: 12px;
     padding: 0 10px;
-    /* line-height: 6vh; */
     height: 6vh;
     width: 100%;
     overflow: hidden;
-    /* text-align: center; */
   }
 
   .time {

@@ -23,14 +23,6 @@ import {formatDate} from '/src/common/utils.js'
 
 export default {
   name:'MonthChoose',
-  // props:{
-  //   month:{
-  //     type:String,
-  //     default(){
-  //       return '2021年3月'
-  //     }
-  //   }
-  // },
   data() {
     return {
       month:'',
